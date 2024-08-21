@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function print(data){
+            let span = document.createElement("span");
+            span.innerHTML = data;
+            document.body.appendChild(span);
+        }
+        function newLine() {
+            let br = document.createElement("br");
+            document.body.appendChild(br);
+        }
+        let board_size = 8;
+        function chessBoard() {
+            for (let i = 0; i < board_size; i++) {
+                for (let j = 0; j < board_size; j++) {
+                    if ((i + j) % 2 == 0) {
+                        print("*");
+                    }
+                    else {
+                        print("#");
+                    }
+                }
+                newLine();
+            }
+        }
+
+        chessBoard();
+    </script>
+</body>
+
+</html>
